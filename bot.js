@@ -238,7 +238,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
 	var strMessage = msg.content;
-	if (strMessage.startsWith("!mg")) {
+	if (strMessage.startsWith("/mg")) {
 		var mamonoName = strMessage.substring(4);
 		var messageRes;
 		var objRes;
@@ -249,9 +249,9 @@ client.on('message', msg => {
 		else if(mamonoName == "help"){
 			//Random Mamono
 			messageRes = "```List of commands : "
-				+"\n - !mg [Name of the Mamono] get the wikia page of the mamono"
-				+"\n - !mg rnd get a wikia page of a random mamono"
-				+"\n - !mg rnd [category] get a wikia page of a random mamono from this type or family"
+				+"\n - /mg [Name of the Mamono] get the wikia page of the mamono"
+				+"\n - /mg rnd get a wikia page of a random mamono"
+				+"\n - /mg rnd [category] get a wikia page of a random mamono from this type or family"
 				+"```";
 		}
 		else if(mamonoName == "rnd"){
